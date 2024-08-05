@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XML DOM</title>
+</head>
+<body>
+    <!-- Paragraph where XML data will be displayed -->
+    <p id="xml_data"></p>
+
+    <script>
+        // XML string containing movie information
+        const text = `
+        <movie>
+            <name>X-man</name>
+            <date>2024/12/05</date>
+            <language>en</language>
+        </movie>`;
+
+        // Creating a new DOMParser object to parse the XML string
+        const parser = new DOMParser();
+
+        // Parsing the XML string into an XML document object
+        const xmlDoc = parser.parseFromString(text, 'text/xml');
+
+        // Logging the value of the <name> element to the console
+        console.log(xmlDoc.getElementsByTagName('name')[0].childNodes[0].nodeValue);
+
+        // Setting the innerHTML of the paragraph element to the value of the <name> element
+        document.getElementById('xml_data').innerHTML = xmlDoc.getElementsByTagName('name')[0].childNodes[0].nodeValue;
+    </script>
+
+</body>
+</html>
