@@ -1,0 +1,17 @@
+<root xmlns:m="http://example.com/movies" xmlns:C="http://example.com/actors">
+  <m:movies id="5">
+    <m:name>X-man</m:name>
+    <m:director>Scott Cooper</m:director>
+    <m:release>2022</m:release>
+  </m:movies>
+  <C:movies id="5">
+    <C:actor>
+      <C:name>Dulitha</C:name>
+      <C:age>40</C:age>
+    </C:actor>
+    <C:actor>
+      <C:name>Pathum</C:name>
+      <C:age>55</C:age>
+    </C:actor>
+  </C:movies>
+</root>
