@@ -21,22 +21,24 @@
                     
                     <!-- Iterate over each movie element in the XML -->
                     <xsl:for-each select="movie">
-                          <!-- Sort movies by name -->
-                        <xsl:sort select="name"/>
-                        <tr>
-                            <!-- Display the name of the movie -->
-                            <td>
-                                <xsl:value-of select="name" />
-                            </td>
-                            <!-- Display the release date of the movie -->
-                            <td>
-                                <xsl:value-of select="date" />
-                            </td>
-                            <!-- Display the language of the movie -->
-                            <td>
-                                <xsl:value-of select="language" />
-                            </td>
-                        </tr>
+                       
+                        <!-- Conditional check: Only display movies released after 2020 -->
+                        <xsl:if test="substring(date, 1, 4) &gt; 2023">
+                            <tr>
+                                <!-- Display the name of the movie -->
+                                <td>
+                                    <xsl:value-of select="name" />
+                                </td>
+                                <!-- Display the release date of the movie -->
+                                <td>
+                                    <xsl:value-of select="date" />
+                                </td>
+                                <!-- Display the language of the movie -->
+                                <td>
+                                    <xsl:value-of select="language" />
+                                </td>
+                            </tr>
+                        </xsl:if>
                     </xsl:for-each>
                 </table>
             </body>
