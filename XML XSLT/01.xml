@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Link to the XSLT stylesheet for transforming the XML into HTML -->
+<?xml-stylesheet href="sample.xsl" type="text/xsl"?>
+
+<!-- Root element containing all movie entries -->
+<movies>
+  
+  <!-- First movie entry -->
+  <movie>
+    <name>X-man</name>
+    <date>2024/12/05</date>
+    <language>en</language>
+  </movie>
+
+  <!-- Second movie entry -->
+  <movie>
+    <name>Avatar: The Way of Water</name>
+    <date>2022/12/16</date>
+    <language>en</language>
+  </movie>
+
+  <!-- Third movie entry -->
+  <movie>
+    <name>Dune: Part Two</name>
+    <date>2024/03/15</date>
+    <language>en</language>
+  </movie>
+
+  <!-- Fourth movie entry -->
+  <movie>
+    <name>The Matrix Resurrections</name>
+    <date>2021/12/22</date>
+    <language>en</language>
+  </movie>
+
+  <!-- Fifth movie entry -->
+  <movie>
+    <name>Spider-Man: No Way Home</name>
+    <date>2021/12/17</date>
+    <language>en</language>
+  </movie>
+
+</movies>

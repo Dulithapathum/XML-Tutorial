@@ -1,27 +1,15 @@
-<!-- This section defines movie details within the "http://example.com/movies" namespace -->
 <m:movies id="5" xmlns:m="http://example.com/movies">
-  <!-- The name of the movie -->
   <m:name>X-man</m:name>
-  <!-- The director of the movie -->
   <m:director>Scott Cooper</m:director>
-  <!-- The release year of the movie -->
   <m:release>2022</m:release>
 </m:movies>
-
-<!-- This section defines actors related to the movie within the "http://example.com/actors" namespace -->
 <C:movies id="5" xmlns:C="http://example.com/actors">
-  <!-- First actor's information -->
   <C:actor>
-    <!-- Name of the first actor -->
     <C:name>Dulitha</C:name>
-    <!-- Age of the first actor -->
     <C:age>40</C:age>
   </C:actor>
-  <!-- Second actor's information -->
   <C:actor>
-    <!-- Name of the second actor -->
     <C:name>Pathum</C:name>
-    <!-- Age of the second actor -->
     <C:age>55</C:age>
   </C:actor>
 </C:movies>
