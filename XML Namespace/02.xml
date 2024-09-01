@@ -1,17 +1,32 @@
+<!-- Root element that includes both movie and actor information, with namespaces defined -->
 <root xmlns:m="http://example.com/movies" xmlns:C="http://example.com/actors">
+  
+  <!-- Movie information section with namespace "m" -->
   <m:movies id="5">
+    <!-- The name of the movie -->
     <m:name>X-man</m:name>
+    <!-- The director of the movie -->
     <m:director>Scott Cooper</m:director>
+    <!-- The release year of the movie -->
     <m:release>2022</m:release>
   </m:movies>
+  
+  <!-- Actor information section with namespace "C" -->
   <C:movies id="5">
+    <!-- First actor's information -->
     <C:actor>
+      <!-- Name of the first actor -->
       <C:name>Dulitha</C:name>
+      <!-- Age of the first actor -->
       <C:age>40</C:age>
     </C:actor>
+    <!-- Second actor's information -->
     <C:actor>
+      <!-- Name of the second actor -->
       <C:name>Pathum</C:name>
+      <!-- Age of the second actor -->
       <C:age>55</C:age>
     </C:actor>
   </C:movies>
+  
 </root>

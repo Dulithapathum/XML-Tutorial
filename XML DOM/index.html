@@ -25,7 +25,7 @@
         const xmlDoc = parser.parseFromString(text, 'text/xml');
 
         // Logging the value of the <name> element to the console
-        console.log(xmlDoc.getElementsByTagName('name')[0].childNodes[0].nodeValue);
+        console.log(xmlDoc.getElementsByTagName('name') );
 
         // Setting the innerHTML of the paragraph element to the value of the <name> element
         document.getElementById('xml_data').innerHTML = xmlDoc.getElementsByTagName('name')[0].childNodes[0].nodeValue;

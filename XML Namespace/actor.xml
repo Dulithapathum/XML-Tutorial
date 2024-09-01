@@ -1,10 +1,20 @@
+<!-- Root element representing a specific movie by its ID -->
 <movies id="5">
+  
+  <!-- First actor's information -->
   <actor>
+    <!-- Name of the first actor -->
     <name>Dulitha</name>
+    <!-- Age of the first actor -->
     <age>40</age>
   </actor>
+  
+  <!-- Second actor's information -->
   <actor>
+    <!-- Name of the second actor -->
     <name>Pathum</name>
+    <!-- Age of the second actor -->
     <age>55</age>
   </actor>
+
 </movies>
