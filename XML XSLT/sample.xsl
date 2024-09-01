@@ -21,6 +21,8 @@
                     
                     <!-- Iterate over each movie element in the XML -->
                     <xsl:for-each select="movie">
+                          <!-- Sort movies by name -->
+                        <xsl:sort select="name"/>
                         <tr>
                             <!-- Display the name of the movie -->
                             <td>
