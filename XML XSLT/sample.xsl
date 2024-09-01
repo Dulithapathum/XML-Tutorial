@@ -21,24 +21,38 @@
                     
                     <!-- Iterate over each movie element in the XML -->
                     <xsl:for-each select="movie">
-                       
-                        <!-- Conditional check: Only display movies released after 2020 -->
-                        <xsl:if test="substring(date, 1, 4) &gt; 2023">
-                            <tr>
-                                <!-- Display the name of the movie -->
-                                <td>
-                                    <xsl:value-of select="name" />
-                                </td>
-                                <!-- Display the release date of the movie -->
-                                <td>
-                                    <xsl:value-of select="date" />
-                                </td>
-                                <!-- Display the language of the movie -->
-                                <td>
-                                    <xsl:value-of select="language" />
-                                </td>
-                            </tr>
-                        </xsl:if>
+                      
+                        
+                        <!-- Conditional check using xsl:choose -->
+                        <xsl:choose>
+                            <!-- Condition for movies released after 2023 -->
+                            <xsl:when test="substring(date, 1, 4) &gt; 2023">
+                                <tr>
+                                    <!-- Display the name of the movie -->
+                                    <td>
+                                        <xsl:value-of select="name" />
+                                    </td>
+                                    <!-- Display the release date of the movie -->
+                                    <td>
+                                        <xsl:value-of select="date" />
+                                    </td>
+                                    <!-- Display the language of the movie -->
+                                    <td>
+                                        <xsl:value-of select="language" />
+                                    </td>
+                                </tr>
+                            </xsl:when>
+                            <!-- Alternative condition for movies released in 2023 or earlier -->
+                            <xsl:otherwise>
+                                <tr>
+                                    <!-- Display a message for older movies -->
+                                    <td colspan="3">
+                                        <xsl:value-of select="name" /> (Released in 2023 or earlier)
+                                    </td>
+                                </tr>
+                            </xsl:otherwise>
+                        </xsl:choose>
+                        
                     </xsl:for-each>
                 </table>
             </body>
