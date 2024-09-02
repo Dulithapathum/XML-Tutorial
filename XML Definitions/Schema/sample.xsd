@@ -1,0 +1,42 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <!-- Defines the root element called 'songs' -->
+    <xs:element name="songs">
+        <xs:complexType>
+            <xs:sequence>
+                <!-- Defines an element called 'song' that can appear one or more times inside 'songs' -->
+                <xs:element name="song" maxOccurs="unbounded" minOccurs="1">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <!-- Defines an element called 'name' inside each 'song' -->
+                            <xs:element name="name">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                      <xs:extension base="xs:string">
+                                        <!-- 'name' has an attribute called 'lang' which must be provided -->
+                                        <xs:attribute name="lang" type="xs:string" use="required"/>
+                                      </xs:extension>
+                                  </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
+                            <!-- Defines an element called 'artist' inside each 'song' -->
+                            <xs:element name="artist" type="xs:string"/>
+                            <!-- Defines an element called 'year' inside each 'song' -->
+                            <xs:element name="year" type="xs:int"/>
+                            <!-- Defines an element called 'length' inside each 'song', which must be between 1.0 and 10.0 -->
+                            <xs:element name="length">
+                              <xs:simpleType>
+                                <xs:restriction base="xs:float">
+                                  <xs:minInclusive value="1.0"/>
+                                  <xs:maxInclusive value="10.0"/>
+                                </xs:restriction>
+                              </xs:simpleType>
+                            </xs:element>
+                        </xs:sequence>
+                        <!-- 'song' has an attribute called 'age' which must be provided -->
+                        <xs:attribute name="age" type="xs:int" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

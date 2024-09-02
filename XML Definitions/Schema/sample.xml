@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Root element that references the schema for validation -->
+<songs xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:SchemaLocation="sample.xsd">
+  
+  <!-- First song entry -->
+  <song age="5">
+    <!-- Name of the song in English -->
+    <name lang="en">Imagine</name>
+    <!-- Artist of the song -->
+    <artist>John Lennon</artist>
+    <!-- Year the song was released -->
+    <year>1971</year>
+    <!-- Length of the song in minutes -->
+    <length>3.1</length>
+  </song>
+
+  <!-- Second song entry -->
+  <song age="10">
+    <!-- Name of the song in Spanish -->
+    <name lang="es">Despacito</name>
+    <!-- Artist of the song -->
+    <artist>Luis Fonsi</artist>
+    <!-- Year the song was released -->
+    <year>2017</year>
+    <!-- Length of the song in minutes -->
+    <length>4.5</length>
+  </song>
+
+  <!-- Third song entry -->
+  <song age="3">
+    <!-- Name of the song in French -->
+    <name lang="fr">La Vie En Rose</name>
+    <!-- Artist of the song -->
+    <artist>Édith Piaf</artist>
+    <!-- Year the song was released -->
+    <year>1947</year>
+    <!-- Length of the song in minutes -->
+    <length>3.7</length>
+  </song>
+
+  <!-- Fourth song entry -->
+  <song age="8">
+    <!-- Name of the song in English -->
+    <name lang="en">Bohemian Rhapsody</name>
+    <!-- Artist of the song -->
+    <artist>Queen</artist>
+    <!-- Year the song was released -->
+    <year>1975</year>
+    <!-- Length of the song in minutes -->
+    <length>5.9</length>
+  </song>
+
+</songs>
