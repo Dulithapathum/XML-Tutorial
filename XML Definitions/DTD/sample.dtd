@@ -1,0 +1,29 @@
+<!-- Define the root element 'movies' containing multiple 'movie' elements -->
+<!ELEMENT movies (movie)*>
+
+<!-- Define the 'movie' element, which includes 'name', 'release', 'imdb', 'boxoffice', and 'credits' elements -->
+<!ELEMENT movie (name, release, imdb, boxoffice, credits)>
+
+<!-- Define an attribute 'out' for the 'movie' element with a default value of 'yes' -->
+<!ATTLIST movie out CDATA "yes">
+
+<!-- Define the 'name' element containing parsed character data (#PCDATA) -->
+<!ELEMENT name (#PCDATA)>
+
+<!-- Define a fixed attribute 'lang' for 'name' element with the value 'en' -->
+<!ATTLIST name lang CDATA #FIXED "en">
+
+<!-- Define the 'release' element containing parsed character data (#PCDATA) -->
+<!ELEMENT release (#PCDATA)>
+
+<!-- Define the 'imdb' element containing parsed character data (#PCDATA) -->
+<!ELEMENT imdb (#PCDATA)>
+
+<!-- Define the 'boxoffice' element containing parsed character data (#PCDATA) -->
+<!ELEMENT boxoffice (#PCDATA)>
+
+<!-- Define the 'credits' element containing parsed character data (#PCDATA) -->
+<!ELEMENT credits (#PCDATA)>
+
+<!-- Define an entity 'copyright' with the text 'CopyRight By Dulitha' -->
+<!ENTITY copyright "CopyRight By Dulitha">

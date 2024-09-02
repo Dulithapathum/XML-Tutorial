@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE movies SYSTEM "sample.dtd">
+
+<movies>
+    <!-- First movie entry -->
+    <movie out="yes">
+        <!-- Name of the movie -->
+        <name>Inception</name>
+        
+        <!-- Release year of the movie -->
+        <release>2010</release>
+        
+        <!-- IMDb rating of the movie -->
+        <imdb>8.8</imdb>
+        
+        <!-- Box office earnings in dollars -->
+        <boxoffice>829895144</boxoffice>
+        
+        <!-- Credits or the director's name -->
+        <credits>Directed by Christopher Nolan</credits>
+    </movie>
+
+    <!-- Second movie entry -->
+    <movie out="no">
+        <!-- Name of the movie -->
+        <name>The Matrix</name>
+        
+        <!-- Release year of the movie -->
+        <release>1999</release>
+        
+        <!-- IMDb rating of the movie -->
+        <imdb>8.7</imdb>
+        
+        <!-- Box office earnings in dollars -->
+        <boxoffice>463517383</boxoffice>
+        
+        <!-- Credits or the directors' names -->
+        <credits>Directed by Lana and Lilly Wachowski</credits>
+    </movie>
+
+    <!-- Third movie entry -->
+    <movie>
+        <!-- Name of the movie -->
+        <name>Avengers: Endgame</name>
+        
+        <!-- Release year of the movie -->
+        <release>2019</release>
+        
+        <!-- IMDb rating of the movie -->
+        <imdb>8.4</imdb>
+        
+        <!-- Box office earnings in dollars -->
+        <boxoffice>2797800564</boxoffice>
+        
+        <!-- Credits using a predefined entity reference -->
+        <credits>&copyright;</credits>
+    </movie>
+    
+    <!-- Additional movies can be added similarly -->
+</movies>
