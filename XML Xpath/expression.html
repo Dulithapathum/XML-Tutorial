@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XPath Expression Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        h2 {
+            color: #333;
+        }
+        code {
+            background-color: #f4f4f4;
+            border-radius: 5px;
+            padding: 5px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        .explanation {
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>XPath Expression Details</h1>
+
+    <div class="explanation">
+        <h2>1. Select the document node</h2>
+        <code>/</code>
+        <p>This selects the root node of the XML document. It represents the entire XML document as a whole.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>2. Select the 'root' element</h2>
+        <code>/movies</code>
+        <p>This selects the <code>movies</code> element, which is the root element of the document.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>3. Select all 'movie' elements that are direct children of the 'movies' element</h2>
+        <code>/movies/movie</code>
+        <p>This selects all <code>movie</code> elements that are directly under the <code>movies</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>4. Select all 'name' elements that are direct children of the 'movie' element</h2>
+        <code>/movies/movie/name</code>
+        <p>This selects all <code>name</code> elements that are directly within any <code>movie</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>5. Select all the elements in the document</h2>
+        <code>//*</code>
+        <p>This selects every element in the entire XML document, regardless of its position.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>6. Select all 'name' elements regardless of their positions in the document</h2>
+        <code>//name</code>
+        <p>This selects all <code>name</code> elements anywhere in the document, no matter where they are located.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>7. Select the first 'movie' element</h2>
+        <code>/movies/movie[1]</code>
+        <p>This selects the first <code>movie</code> element within the <code>movies</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>8. Select all the children of the 'cast' element of the fifth 'movie' element</h2>
+        <code>/movies/movie[5]/cast/*</code>
+        <p>This selects all child elements of the <code>cast</code> element that is within the fifth <code>movie</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>9. Select the last actor of every 'movie' element</h2>
+        <code>/movies/movie/cast/actor[last()]</code>
+        <p>This selects the last <code>actor</code> element within each <code>cast</code> element inside all <code>movie</code> elements.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>10. Select the first 3 'movie' elements</h2>
+        <code>/movies/movie[position() &lt; 4]</code>
+        <p>This selects the first three <code>movie</code> elements under the <code>movies</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>11. Select the textual value of the 'imdb' element of all 'movie' elements</h2>
+        <code>//imdb/text()</code>
+        <p>This selects the text content within all <code>imdb</code> elements across the document.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>12. Select the textual value of the second movie 'name' element</h2>
+        <code>/movies/movie[2]/name/text()</code>
+        <p>This selects the text content within the <code>name</code> element of the second <code>movie</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>13. Select the textual value of the last movie 'name' element</h2>
+        <code>/movies/movie[last()]/name/text()</code>
+        <p>This selects the text content within the <code>name</code> element of the last <code>movie</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>14. Select all 'movie' elements with the 'release' element value as '2021-10-29'</h2>
+        <code>/movies/movie[release = "2021-10-29"]</code>
+        <p>This selects all <code>movie</code> elements where the <code>release</code> element has the value <code>2021-10-29</code>.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>15. Select all 'movie' elements with the 'imdb' element value greater than or equal to '7.0'</h2>
+        <code>/movies/movie[imdb &gt;= "7.0"]</code>
+        <p>This selects all <code>movie</code> elements where the <code>imdb</code> element has a value greater than or equal to <code>7.0</code>.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>16. Select the 'id' attribute of the 'actor' elements that are direct children of the 'cast'</h2>
+        <code>/movies/movie/cast/actor/@id</code>
+        <p>This selects the <code>id</code> attribute of all <code>actor</code> elements that are directly within any <code>cast</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>17. Select all 'movie' elements that have an 'id' attribute</h2>
+        <code>//movie[@id]</code>
+        <p>This selects all <code>movie</code> elements that have an <code>id</code> attribute.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>18. Select all 'name' elements that have a 'lang' attribute value of 'en'</h2>
+        <code>/movies/movie/name[@lang = "en"]</code>
+        <p>This selects all <code>name</code> elements under <code>movie</code> elements where the <code>lang</code> attribute is <code>en</code>.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>19. Select all 'movie' elements that have a 'lang' attribute value of 'hi'</h2>
+        <code>/movies/movie[name[@lang = "hi"]]</code>
+        <p>This selects all <code>movie</code> elements that contain a <code>name</code> element with a <code>lang</code> attribute value of <code>hi</code>.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>20. Select textual value of the 'name' element of all 'actor' elements that have a 'gender' attribute value of 'female'</h2>
+        <code>//actor/name[@gender = "female"]/text()</code>
+        <p>This selects the text content of <code>name</code> elements for all <code>actor</code> elements that have a <code>gender</code> attribute set to <code>female</code>.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>21. Select all 'boxoffice' elements AND all 'imdb' elements</h2>
+        <code>//boxoffice|//imdb</code>
+        <p>This selects all <code>boxoffice</code> and <code>imdb</code> elements in the document.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>22. Select the name of the second element of the first 'movie' element</h2>
+        <code>name(//movie[1]/*[2])</code>
+        <p>This returns the name of the second child element of the first <code>movie</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>23. Select the numeric value of the 'imdb' element of the last 'movie' element</h2>
+        <code>number(/movies/movie[last()]/imdb)</code>
+        <p>This returns the numeric value of the <code>imdb</code> element for the last <code>movie</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>24. Select the string representation value of the 'country' element of the 'movie' element with imdb equal to '4.3'</h2>
+        <code>string(//movie[imdb = "4.3"]/country)</code>
+        <p>This returns the string value of the <code>country</code> element within the <code>movie</code> element where the <code>imdb</code> element has a value of <code>4.3</code>.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>25. Select the length of the 'name' element's textual value of the first 'actor' element of the sixth 'movie' element</h2>
+        <code>string-length(//movie[6]/cast/actor[1]/name/text())</code>
+        <p>This returns the length of the text content of the <code>name</code> element for the first <code>actor</code> in the sixth <code>movie</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>26. Select the local name of the 'country' element of the first 'movie' element, i.e., without the namespace</h2>
+        <code>local-name(//movie[1]/country)</code>
+        <p>This returns the local name (i.e., the name without any namespace prefix) of the <code>country</code> element in the first <code>movie</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>27. Select the number of 'movie' elements</h2>
+        <code>count(/movies/movie)</code>
+        <p>This returns the number of <code>movie</code> elements within the <code>movies</code> element.</p>
+    </div>
+
+    <div class="explanation">
+        <h2>28. Select the sum of all 'age' elements of all 'actor' elements of the second 'movie' element</h2>
+        <code>sum(//movie[2]/cast/actor/age)</code>
+        <p>This returns the sum of the values of all <code>age</code> elements for all <code>actor</code> elements within the second <code>movie</code> element.</p>
+    </div>
+
+</body>
+</html>
